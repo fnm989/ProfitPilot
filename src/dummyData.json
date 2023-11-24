@@ -1,0 +1,32 @@
+  [
+      {
+        "firstName": "mohmad",
+        "lastName": "sultan",
+        "idNumber": 9826410283,
+        "bankAccounts": [
+          { "bankName": "alinma Bank", "accountNumber": "276578975431111", "balance": 30000 },
+          { "bankName": "Riyad Bank", "accountNumber": "879866453246", "balance": 230 }
+        ]
+      },
+      {
+        "firstName": "Faisal",
+        "lastName": "Nasser",
+        "idNumber": "1119283648",
+        "bankAccounts": [
+          { "bankName": "Samba", "accountNumber": "132874786237834", "balance": 690 },
+          { "bankName": "alawwal bank", "accountNumber": "9873978937w798we", "balance": 532 }
+        ]
+      },
+      {
+        "firstName": "saleh",
+        "lastName": "faisal",
+        "idNumber": "1034527673",
+        "bankAccounts": [
+          { "bankName": "Riyad Bank", "accountNumber": "45332565654432", "balance": 4000000 },
+          { "bankName": "alawwal bank", "accountNumber": "9873978937w798we", "balance": 30000 }
+        ]
+      }
+  
+    ]
+    
+  
