@@ -1,4 +1,3 @@
-// src/ChoosePage.js
 import { Link } from 'react-router-dom';
 import dummyData from './dummyData';
 

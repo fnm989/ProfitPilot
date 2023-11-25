@@ -48,7 +48,7 @@ const sumBalance = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <div id="header">
         
           <h1>Welcome!</h1>
