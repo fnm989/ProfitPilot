@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import dummyData from './dummyData';
+import dummyData from './dummyData.json';
 import "./style.css"
 
 function UserInfoPage() {
   const { index } = useParams();
-  const user = dummyData[index];
+  // const user = dummyData[index];
+  const [user, setUser] = useState(dummyData[index])
 
   const [newAccount, setNewAccount] = useState({
     bankName: '',
@@ -19,7 +20,8 @@ function UserInfoPage() {
   };
 
   const addNewAccount = () => {
-    dummyData[index].bankAccounts.push(newAccount);
+    user.bankAccounts.push(newAccount);
+    setUser(user)
     setNewAccount({ bankName: '', accountNumber: '', balance: 0 });
   };
 
@@ -32,9 +34,10 @@ const sumBalance = () => {
 
   // Function to delete a bank account
   const deleteAccount = (accountNumber) => {
-    dummyData[index].bankAccounts = dummyData[index].bankAccounts.filter(
-      (account) => account.accountNumber !== accountNumber
-    );
+    const clone = JSON.parse(JSON.stringify(user))
+    clone.bankAccounts = clone.bankAccounts.filter(account => account.accountNumber !== accountNumber )
+    console.log(clone);
+    setUser(clone)
   };
 
 
@@ -47,10 +50,12 @@ const sumBalance = () => {
     ));
   };
 
+  console.log(user.bankAccounts);
+
   return (
     <div className='container'>
       <div id="header">
-        
+
           <h1>Welcome!</h1>
           <p id="username">{user.firstName} {user.lastName}</p>
       </div>
@@ -64,7 +69,7 @@ const sumBalance = () => {
         {user.bankAccounts.map((account) => (
           <div key={account.id} className="balanceBox">
             {/* Delete button within the current account box */}
-            <button className="deleteButton" onClick={() => deleteAccount(account.id)}>
+            <button className="deleteButton" onClick={() => deleteAccount(account.accountNumber)}>
               X
             </button>
             <h3>{account.bankName}</h3>
@@ -113,9 +118,8 @@ const sumBalance = () => {
       Add Account
     </button>
   </form>
-</div>
+</div> 
 
-          
       </div>
       <Link to="/">Back to Choose Page</Link>
     </div>

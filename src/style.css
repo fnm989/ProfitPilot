@@ -48,6 +48,18 @@
     font-weight: bold;
     text-align: right;
   }
+
+  #users {
+    background-color: #007dd9;
+    color: white;
+    padding: 15px;
+    margin: 80px 20px 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    font-size: 18px;
+  }
   
   #totalBalance {
     background-color: #007dd9;
@@ -89,7 +101,7 @@
   }
 
   .balanceBoxx {
-    background-color: #175c0a;
+    background-color: #007dd9;
     color: white;
     padding: 15px;
     margin: 0 5px;
@@ -130,4 +142,18 @@
     position: absolute;
     top: 5px;
     right: 5px;
+  }
+
+  .choose-users{
+    background-color: #007dd9;
+    color: white;
+    padding: 15px;
+    margin: 80px 20px 20px;
+    border-radius: 15px;
+    text-align: center;
+    flex-direction: column;
+    width: 300px;
+    height: 100px;
+    font-size: 18px;
+    transition: transform 0.3s;
   }

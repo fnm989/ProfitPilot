@@ -1,10 +1,11 @@
   [
       {
-        "firstName": "mohmad",
-        "lastName": "sultan",
+        "firstName": "Mohmad",
+        "lastName": "Almosa",
         "idNumber": 9826410283,
         "bankAccounts": [
           { "bankName": "alinma Bank", "accountNumber": "276578975431111", "balance": 30000 },
+          { "bankName": "Riyad Bank", "accountNumber": "879866453246", "balance": 230 },
           { "bankName": "Riyad Bank", "accountNumber": "879866453246", "balance": 230 }
         ]
       },
